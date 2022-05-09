@@ -1,7 +1,5 @@
 # tabell
 ネーミングコマンドラインツール
-BADGE YOUR REPO: TABELL
-We detected this repo isn’t badged! Grab the embed code to the right, add it to your repo to show off your code coverage, and when the badge is live hit the refresh button to remove this message.
 
 
 
