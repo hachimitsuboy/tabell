@@ -3,6 +3,8 @@
 [![Coverage Status](https://coveralls.io/repos/github/hachimitsuboy/tabell/badge.svg?branch=main)](https://coveralls.io/github/hachimitsuboy/tabell?branch=main)
 [![build](https://github.com/hachimitsuboy/tabell/actions/workflows/build.yml/badge.svg)](https://github.com/hachimitsuboy/tabell/actions/workflows/build.yml)
 
+[icon.png](https://github.com/hachimitsuboy/tabell/blob/main/icon.png)
+
 
 
 
