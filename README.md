@@ -1,5 +1,6 @@
 # tabell
 ネーミングコマンドラインツール
+https://coveralls.io/repos/github/hachimitsuboy/tabell/badge.svg(Coverage Status)!:https://coveralls.io/github/hachimitsuboy/tabell
 
 
 
