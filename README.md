@@ -2,9 +2,10 @@
 ネーミングコマンドラインツール
 [![Coverage Status](https://coveralls.io/repos/github/hachimitsuboy/tabell/badge.svg?branch=main)](https://coveralls.io/github/hachimitsuboy/tabell?branch=main)
 [![build](https://github.com/hachimitsuboy/tabell/actions/workflows/build.yml/badge.svg)](https://github.com/hachimitsuboy/tabell/actions/workflows/build.yml)
+[![Rust Report Card](https://rust-reportcard.xuri.me/badge/github.com/hachimitsuboy/tabell)](https://rust-reportcard.xuri.me/report/github.com/hachimitsuboy/tabell)
 
 ![image](https://user-images.githubusercontent.com/39763423/167385385-cb4eb727-c7c4-48fa-b8af-4b4f30702c51.png)
-[![Rust Report Card](https://rust-reportcard.xuri.me/badge/github.com/hachimitsuboy/tabell)](https://rust-reportcard.xuri.me/report/github.com/hachimitsuboy/tabell)
+
 
 
 
