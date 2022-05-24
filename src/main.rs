@@ -1,5 +1,5 @@
-use clap::Parser;
 
+use clap::Parser;
 
 #[derive(Parser)]
 #[clap(
@@ -26,6 +26,9 @@ struct AppArg {
 
 fn main(){
         let _arg: AppArg = AppArg::parse();
+
+        println!("{}", _arg.message);
+
 }
 
 fn hello(name: Option<String>) -> String {
