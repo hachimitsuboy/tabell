@@ -1,4 +1,5 @@
-
+extern crate mecab;
+use mecab::Tagger;
 use clap::Parser;
 
 #[derive(Parser)]
@@ -25,9 +26,23 @@ struct AppArg {
 }
 
 fn main(){
-        let _arg: AppArg = AppArg::parse();
+        // let _arg: AppArg = AppArg::parse();
+        let mut input = String::new();
+        std::io::stdin().read_line(&mut input).ok();
+        let mut tagger = Tagger::new("");
+        let mut result = tagger.parse_str(input);
+        // println!("RESULT: {:?}", result);
+        //改行で区切る
+        let lineResult: Vec<&str> = result.as_str().split('\n').collect();
+         
+       
+        //タブ文字で区切る。先頭を取り出す
+        
+        for i in lineResult {
+            println!("{:?}", i)
 
-        println!("{}", _arg.message);
+        }
+        // println!("{}", _arg.message);
 
 }
 

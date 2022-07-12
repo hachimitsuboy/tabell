@@ -9,4 +9,7 @@ description = "Make Variable Name CLI"
 
 [dependencies]
 clap = { version = "3.0.0-rc.9", features = ["derive"] }
+mecab = "*"
+rusqlite = "*"
+
 
