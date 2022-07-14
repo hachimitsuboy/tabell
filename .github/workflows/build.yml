@@ -29,7 +29,7 @@ jobs:
           rustup component add llvm-tools-preview
       - name: Build 
         run: |
-          cargo llvm-cov --lcov --output-path coverage.lcov
+          # cargo llvm-cov --lcov --output-path coverage.lcov
           cargo build
       - name: Send Coverage to Coveralls
         uses: coverallsapp/github-action@master
