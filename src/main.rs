@@ -1,11 +1,9 @@
-extern crate mecab;
 extern crate serde;
 extern crate serde_json;
-use std::collections::BTreeMap;
-use mecab::Tagger;
+extern crate reqwest;
 use clap::Parser;
-use reqwest::Client;
 use std::env;
+
 
 #[derive(Parser)]
 #[clap(
@@ -33,23 +31,49 @@ struct AppArg {
 
 
 
-fn main(){
+
+use reqwest::Client;
+type Result<T> = std::result::Result<T, Box<dyn std::error::Error>>;
+#[tokio::main]
+
+async fn main() -> Result<()>{
         // let _arg: AppArg = AppArg::parse();
         let args: Vec<String> = env::args().collect();
-
         let input = &args[1];
     
-        
         let url = "https://api.codic.jp/v1/engine/translate.json?text=".to_string() + input + "&casing=camel";
 
 
-        let client = reqwest::blocking::Client::new();
-        let res = client.get(url).header("Authorization", "Bearer n62BwX8uDpShpvXkBlnJNNsqrApyd9r0QI").header("Host", "api.codic.jp").send().unwrap();
+        let client = Client::new();
+        let res = client.get(url).header("Authorization", "Bearer n62BwX8uDpShpvXkBlnJNNsqrApyd9r0QI").header("Host", "api.codic.jp").send().await?;
+
+        let body = res.text().await?;
+
+    
+        let split_body: Vec<&str> = body.split("\"").collect();
+        println!("{:?}", split_body[9]);
 
         
+
+        let json: serde_json::Value = serde_json::from_str(&body)?;
+
+        let obj = json.as_object().unwrap();
+
+        println!("{:?}", obj);
+
+
+        for (key,value) in obj.iter() {
+            println!("{:?}\t{:?}",key,value);
+            }
     
-        println!("{}", type_of(&res));
-        println!("Response: {:?}", res);
+        eprintln!("*** 終了 ***");
+        Ok(())
+    
+
+            
+    
+        // println!("{}", type_of(&res));
+        // println!("Response: {:?}", res);
 
         // let mut tagger = Tagger::new("");
 
