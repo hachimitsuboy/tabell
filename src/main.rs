@@ -87,7 +87,7 @@ mod tests {
     }
 
     fn test_input() {
-        let r1 = request("大きな時計").unwrap();
+        let r1 = request("大きな時計").await.unwrap();
         assert_eq!("largeClock", r1);
     }
 
