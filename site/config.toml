@@ -1,7 +1,7 @@
-baseURL = "https://github.com/hachimitsuboy/tabell"
+baseURL = "https://hachimitsuboy.github.io/tabell/"
 languageCode = 'ja'
 defaultContentLanguage = 'ja'
-title = 'My New Hugo Site'
+title = 'Documents about Tabell'
 theme = 'hugo-tranquilpeak-theme'
 
 [author]
