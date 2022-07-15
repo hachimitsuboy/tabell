@@ -87,7 +87,8 @@ mod tests {
     }
 
     fn test_input() {
-        assert_eq!(Result<"largeClock",alloc::boxed::Box<dyn std::error::Error>>, request("大きな時計"));
+        let r1 = request("大きな時計").unwrap();
+        assert_eq!("largeClock", r1);
     }
 
 }
