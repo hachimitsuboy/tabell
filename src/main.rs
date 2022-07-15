@@ -44,7 +44,7 @@ async fn main() {
 }
 
 use reqwest::Client;
-type Result<T> = std::result::Result<T, Box<dyn std::error::Error>>;
+type Result<String> = std::result::Result<String, Box<dyn std::error::Error>>;
 
 async fn request(input: &str) -> Result<()>{
  
