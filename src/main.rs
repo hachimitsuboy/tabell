@@ -29,24 +29,18 @@ struct AppArg {
 }
 
 
-
-
-
 #[tokio::main]
 async fn main() {
-        // let _arg: AppArg = AppArg::parse();
+
         let args: Vec<String> = env::args().collect();
         let input = &args[1];
-        println!("input: {}", input);
         let res = request(input).await;
-        println!("{}",type_of(&res));
+        println!("{}", res.unwrap());
 
 }
 
 use reqwest::Client;
-type Result<String> = std::result::Result<String, Box<dyn std::error::Error>>;
-
-async fn request(input: &str) -> Result<()>{
+async fn request(input: &str) -> Result<String, Box<dyn std::error::Error>>{
  
     let url = "https://api.codic.jp/v1/engine/translate.json?text=".to_string() + input + "&casing=camel";
 
@@ -56,37 +50,17 @@ async fn request(input: &str) -> Result<()>{
     let body = res.text().await?;
     
     let split_body: Vec<&str> = body.split("\"").collect();
-    println!("{:?}", split_body[9]);   
-    
+    let result = split_body[9].to_string();
 
-    Ok(())
-
+    Ok(result)
 }
-
-fn type_of<T>(_: &T) -> &'static str {
-    std::any::type_name::<T>()
-}
-
-fn hello(name: Option<String>) -> String {
-    return format!("Hello, {}", if let Some(n) = name {
-        n
-    } else {
-        "World".to_string()
-    })
-}
-
 
 #[cfg(test)]
 mod tests {
     use super::*;
 
-    #[test]
-    fn test_basic() {
-        assert_eq!("Hello, World", hello(None));
-        assert_eq!("Hello, Nagae", hello(Some("Nagae".to_string())));
-    }
-
-    fn test_input() {
+    #[tokio::test]
+    async fn response() {
         let r1 = request("大きな時計").await.unwrap();
         assert_eq!("largeClock", r1);
     }
