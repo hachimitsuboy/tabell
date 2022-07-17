@@ -2,7 +2,7 @@
 ネーミングコマンドラインツール
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/39763423/179402936-f2798e3e-2d62-479a-a7ea-d7103cc8a87e.png" width = "100px" />
+  <img src="https://user-images.githubusercontent.com/39763423/179402936-f2798e3e-2d62-479a-a7ea-d7103cc8a87e.png" width = "180px" />
 </p>
 
 
