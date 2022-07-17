@@ -1,20 +1,29 @@
 [package]
-name = "tabell"
-version = "0.1.0"
-edition = "2021"
 authors = ["Akinobu Nagae <nagae.keu@gamil.com>"]
 description = "Make Variable Name CLI"
+edition = "2021"
+name = "tabell"
+version = "0.1.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-clap = { version = "3.0.0-rc.9", features = ["derive"] }
-mecab = "*"
-rusqlite = "*"
+clap = {version = "3.0.0-rc.9", features = ["derive"]}
 google-translate2 = "*"
-serde = { version = "1.0.139", features = ["derive"]}
+mecab = "*"
+reqwest = {version = "0.11.11", features = ["json", "blocking"]}
+rusqlite = "*"
+serde = {version = "1.0.139", features = ["derive"]}
 serde_json = "^1.0"
-reqwest = { version = "0.11.11", features = ["json", "blocking"] }
-tokio = { version = "1.19.2", features = ["full"] }
+tokio = {version = "1.19.2", features = ["full"]}
 
+[build_dependencies]
+clap = {version = "3.1.9", features = ["derive"]}
+clap_complete = "3.1.4"
+thiserror = "1.0.30"
 
+[package.metadata.scripts]
+coverage = "cargo llvm-cov --html; mkdir -p site/static/coverage; cp -r target/llvm-cov/html/* site/static/coverage/"
+hello = "echo \"Hello World\""
+server = "hugo -s site server"
+site = "hugo -s site"

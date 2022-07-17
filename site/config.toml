@@ -1,0 +1,56 @@
+baseURL = "https://hachimitsuboy.github.io/tabell/"
+languageCode = 'ja'
+defaultContentLanguage = 'ja'
+title = 'Documents about Tabell'
+theme = 'hugo-tranquilpeak-theme'
+
+[author]
+  name = "8mitsuboy"
+  bio = "Flutter初学者"
+  job = "その辺の大学院生"
+  location = "Japan"
+  # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
+  picture = "https://avatars.githubusercontent.com/u/39763423?v=4"
+
+[params]
+  sidebarBehavior = 2
+  thumbnailImage = true
+  dateFormat = "2006-01-02"
+  thumbnailImagePosition = "left"
+  autoThumbnailImage = true
+  coverImage = "images/cover_1.jpeg"
+  imageGallery = true
+  hierarchicalCategories = true
+  syntaxHighlighter = 'highlight.js'
+  
+[[menu.main]]
+  weight = 1
+  identifier = "home"
+  name = "Home"
+  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-home\" aria-hidden=\"true\"></i>"
+  url = "/"
+[[menu.main]]
+  weight = 2
+  identifier = "categories"
+  name = "Categories"
+  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-bookmark\" aria-hidden=\"true\"></i>"
+  url = "/categories"
+[[menu.main]]
+  weight = 3
+  identifier = "tags"
+  name = "Tags"
+  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-tags\" aria-hidden=\"true\"></i>"
+  url = "/tags"
+[[menu.main]]
+  weight = 5
+  identifier = "about"
+  name = "About"
+  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-question\" aria-hidden=\"true\"></i>"
+  url = "/#about"
+
+[[menu.links]]
+  weight = 0
+  identifier = "github"
+  name = "GitHub"
+  pre = "<i class=\"sidebar-button-icon fab fa-lg fa-github\" aria-hidden=\"true\"></i>"
+  url = ""
