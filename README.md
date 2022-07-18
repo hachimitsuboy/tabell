@@ -10,9 +10,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/hachimitsuboy/tabell/badge.svg?branch=main)](https://coveralls.io/github/hachimitsuboy/tabell?branch=main)
 [![build](https://github.com/hachimitsuboy/tabell/actions/workflows/build.yml/badge.svg)](https://github.com/hachimitsuboy/tabell/actions/workflows/build.yml)
 [![Rust Report Card](https://rust-reportcard.xuri.me/badge/github.com/hachimitsuboy/tabell)](https://rust-reportcard.xuri.me/report/github.com/hachimitsuboy/tabell)
-[![DOI](https://zenodo.org/badge/490134626.svg)](https://zenodo.org/badge/latestdoi/490134626)
-![](https://img.shields.io/badge/novice-engineer-success)
-
+<img src="https://img.shields.io/badge/-Beginner%20engineer-gree.svg?logo=github&style=popout">
 
 
 
